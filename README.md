@@ -1,8 +1,8 @@
-# anqtwz
+# anqwtz
 
 ## About
 
-[anqtz](https://github.com/schmamps) simulates Ryan North's
+[anqwtz](https://github.com/schmamps/anqwtz) simulates Ryan North's
 [Dinosaur Comics](https://qwantz.com/).
 
 This is a simple project to:
@@ -19,4 +19,4 @@ poetry run flask run
 ```
 
 This will start the test server on [localhost:4242](http://localhost:4242/),
-the host and port tested by Yu Dereader:
+the host and port tested by Yu Dereader.
