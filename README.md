@@ -18,4 +18,5 @@ When you have `poetry` installed, simply execute:
 poetry run flask run
 ```
 
-This will start the test server on the host and port tested by Yu Dereader:  http://localhost:4242/
+This will start the test server on [localhost:4242](http://localhost:4242/),
+the host and port tested by Yu Dereader:
