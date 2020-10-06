@@ -1,0 +1,145 @@
+{
+	"categories": [
+		"T-Rex and Pals",
+		"Other Friends"
+	],
+	"defaults": {
+		"title": "",
+		"src": "",
+		"param": "",
+		"position": "0 0",
+		"category": "",
+		"catID": 0
+	},
+	"views": [
+		{
+			"title": "The Canonical Cartoon",
+			"src": "",
+			"param": ""
+		},
+		{
+			"title": "One Where T-Rex Got Assimilated",
+			"src": "assimilated"
+		},
+		{
+			"title": "One Where T-Rex Wears More",
+			"src": "clothes"
+		},
+		{
+			"title": "One Where T-Rex Swears More",
+			"src": "frig"
+		},
+		{
+			"title": "Something More Historically Accurate",
+			"src": "feathers"
+		},
+		{
+			"title": "The Last Dinosaur Comic Ever",
+			"src": "lastever"
+		},
+		{
+			"title": "Before the Special Effects Are Added"
+		},
+		{
+			"title": "One Done in Watercolours",
+			"src": "watercolours"
+		},
+		{
+			"title": "D.C. Comics",
+			"src": "batman"
+		},
+		{
+			"title": "Just About T-Rex",
+			"src": "moretrex"
+		},
+		{
+			"title": "About Pirates",
+			"src": "pirates"
+		},
+
+		{
+			"title": "Dr. McNinja",
+			"src": "mcninja"
+		},
+		{
+			"title": "Penny Arcade",
+			"src": "penny",
+			"position": "7px 8px",
+			"catID": 1
+		},
+		{
+			"title": "Problem Sleuth",
+			"catID": 1
+		},
+		{
+			"title": "XKCD",
+			"catID": 1
+		},
+		{
+			"title": "Sweet Bro and Hella Jeff",
+			"src": "sbahj",
+			"catID": 1
+		},
+		{
+			"title": "A Lesson Is Learned But the Damage Is Irreversible",
+			"src": "alil",
+			"catID": 1
+		},
+		{
+			"title": "BRODYQUEST",
+			"src": "brodyquest.gif",
+			"catID": 1
+		},
+		{
+			"title": "Buttercup Festival",
+			"catID": 1
+		},
+		{
+			"title": "Daisy Owl",
+			"catID": 1
+		},
+		{
+			"title": "Nedroid",
+			"catID": 1
+		},
+		{
+			"title": "Pokey the Penguin",
+			"src": "pokey",
+			"param": "pokey",
+			"catID": 1
+		},
+		{
+			"title": "Shortpacked!",
+			"catID": 1
+		},
+		{
+			"title": "Wigu Adventures",
+			"src": "wigu",
+			"param": "wigu",
+			"catID": 1
+		},
+		{
+			"title": "Wondermark",
+			"catID": 1
+		},
+		{
+			"title": "Achewood",
+			"position": "0 30px",
+			"catID": 1
+		},
+		{
+			"title": "Registered Weapon",
+			"catID": 1
+		},
+		{
+			"title": "Sister Claire",
+			"catID": 1
+		},
+		{
+			"title": "The RIAA Version of the Internet",
+			"src": "censored.gif",
+			"param": "theRIAAversionoftheinternet",
+			"catID": 1
+		}
+	]
+}

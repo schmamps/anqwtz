@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "anqtwz"
+version = "0.1.0"
+description = ""
+authors = ["Andrew Champion <awchampion@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+Flask = "^1.1.2"
+arrow = "^0.16.0"
+Pillow = "^7.2.0"
+Faker = "^4.4.0"
+inflect = "^4.1.0"
+python-dotenv = "^0.14.0"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.6.0"
+flake8 = "^3.8.4"
+isort = "^5.5.4"
+rope = "^0.17.0"
+mypy = "^0.782"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]

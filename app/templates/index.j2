@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="alternate" type="application/rdf+xml" title="RSS .91" href="http://localhost:4242/rssfeed.php">
+	<link rel="alternate" type="application/rss+xml" title="Dinosaur Comics" href="http://localhost:4242/rssfeed.php">
+	<meta name="title" content="dinosaur comics">
+	<meta name="description" content="this comic... might be the best comic?">
+	<meta name="keywords"
+		content="dinosaur, comics, utahraptor, t-rex, dromiceiomimus, funny, humour, humor, constrained writing, extremely sexy dinosaurs, wait is that gross">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@dinosaurcomics">
+	<meta name="twitter:title" content="Dinosaur Comics!">
+	<meta
+		name="twitter:description"
+		content="{{ content.title|e }}"
+	>
+	<meta name="twitter:creator" content="@">
+	<meta
+		name="twitter:image:src"
+		content="http://localhost:4242{{ page.canon }}.png"
+	>
+	<meta
+		property="og:url"
+		content="http://localhost:4242/index.php?comic={{ page.id }}"
+	>
+	<meta property="og:determiner" content="a">
+	<meta property="og:title" content="Dinosaur Comics!">
+	<meta property="og:description" content="{{ content.title|e }}">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://localhost:4242{{ page.canon }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style17.css')}}" media="screen" title="Default">
+	<title>Dinosaur Comics - {{ content.date }} - awesome fun times!</title>
+</head>
+
+<body>
+	<img src="/pteranodon.png" class="pteranodon">
+	<img src="/rhamphorhynchus.png" class="rhamphorhynchus">
+	<div id="header">
+		<table>
+			<tbody>
+				<tr>
+					<td class="logo">
+						<a href="http://localhost:4242/index.php">
+							<img src="/logo5.png" title="Dinosaur Comics!  I KNOW" class="logo">
+						</a>
+					</td>
+					<td>
+						<ul class="topnav">
+							<li><a href="http://localhost:4242/about.php">about</a></li>
+							<li><a href="http://localhost:4242/archive.php">archive</a></li>
+							<li><a
+									href="mailto:x@example.com?subject={{ content.contact }}"
+								>contact</a>
+							</li>
+							<li><a href="https://topatoco.com/collections/ryan-north">sexy exciting merch</a></li>
+							<li><a href="http://www.howtoinventeverything.com/" style="color:#ffc6ca;">how to invent
+									everything</a></li>
+							<li><a href="http://www.ohnorobot.com/index.php?comic=23">search</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="randomquote">
+							<a href="http://www.patreon.com/qwantz">Read tomorrow's comic today! IF YOU DARE!!</a>
+							–<img
+								src="http://localhost:4242/utahchat2.png"
+								width="16" height="16"
+								title="Utahraptor!  WHAT ARE YOU UP TO??"
+							>
+							<br>
+							<img
+								src="http://localhost:4242/forum/images/smiles/trex-omg.gif" width="15" height="15"
+								title="That T-Rex, always sayin' somethin'"
+							>
+							–<a href="http://qwantz.com/index.php?comic=1389">But especially me!!</a>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- <span class="rss-title">{{ content.rss }}</span> -->
+	<center>
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<div class="nohover">
+							<a href="{{ nav.prev }}" title="Previous comic" rel="prev">
+								<div class="arrowholder">
+									<div id="leftarrow"></div>
+								</div>
+							</a>
+						</div>
+					</td>
+					<td>
+{% if page.id == page.dubs %}
+	<div id="cf">
+		<p id="dubs"><a name="dubs">dubs!</a></p>
+		<img src="{{ page.src[0] }}" class="comic bottom" title="{{ content.title }}">
+		<img src="{{ page.src[1] }}" class="comic top" title="{{ content.title }}">
+	</div>
+{% else %}
+		<p id="dubs">
+			<a name="dubs"href="/index.php?comic={{ page.dubs }}">not dubs</a>
+		</p>
+	<img
+		title="{{ content.title }}"
+	{% if page.canon != page.src[0] %}
+		style="background-image:url({{ page.canon }})"
+	{% endif %}
+		src="{{ page.src[1] }}"
+		class="comic"
+	>
+{% endif %}
+					</td>
+					<td>
+						<div class="nohover">
+							<a href="{{ nav.next }}" title="Next comic" rel="next">
+								<div class="arrowholder">
+									<div id="rightarrow"></div>
+								</div>
+							</a>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</center>
+	<div id="container">
+		<div id="blogpost">
+			<div id="blogpostheader">What are the haps my friends</div>
+				<div class="padded">
+{% for para in content.blog %}
+	<p>
+	{% if loop.index == 1 %}
+		<b>{{ content.date }}:</b>
+		<span class="rss-content">
+	{% endif %}
+	{{ para|e }}
+	{% if loop.index == 1 %}
+		</span>
+	{% endif %}
+	</p>
+{% endfor %}
+			</div>
+		</div>
+		<div id="shirtad">
+			<div id="shirtadheader">big ups and shouts out</div>
+			<div class="padded">
+				<div class="shoutoutleft">
+					<ul class="sidebarlinks">
+						<ul class="sidebarlinks">
+							<li>Some things you can do to be awesome:</li>
+							<li><a href="http://qwantz.com/peoplearecool.php">check out our secret flickr keywords</a></li>
+							<li><a href="http://qwantz.com/fanart/japan/">see something adorable</a></li>
+							<li><a href="http://www.twitter.com/ryanqnorth">stalk me on twitter</a> or <a
+									href="http://ryannorth.tumblr.com">tumblr</a></li>
+							<li>haha okay so listen when i said "stalk" i was JUST JOKING</li>
+						</ul>
+						<ul class="sidebarlinks">
+							<li>Some things you can do to help others:</li>
+							<li><a href="http://www.worldcommunitygrid.org/team/viewTeamInfo.do?teamId=412W2GKRLR1">
+									join our distributed computing team!</a></li>
+							<li><a href="http://www.kiva.org/team/webcomics/">microloan with team webcomics!</a></li>
+						</ul>
+					</ul>
+				</div>
+				<div class="shoutoutright">
+					<ul class="sidebarlinks">
+						<li>Some comics I would TOTALLY MARRY:</li>
+					</ul>
+					<ul class="sidebarlinksdash">
+						<li><a href="http://www.asofterworld.com/">a softer world</a></li>
+						<li><a href="http://www.achewood.com/">achewood</a></li>
+						<li><a href="http://www.scarygoround.com">bad machinery</a></li>
+						<li><a href="http://www.buttercupfestival.com">buttercup festival</a></li>
+						<li><a href="http://www.catandgirl.com/">cat and girl</a></li>
+						<li><a href="http://www.boltcity.com/copper/">copper</a></li>
+						<li><a href="http://www.dieselsweeties.com">diesel sweeties</a></li>
+						<li><a href="http://www.dresdencodak.com/">dresden codak</a></li>
+						<li><a href="http://www.drmcninja.com">dr. mcninja</a></li>
+						<li><a href="http://www.dumbingofage.com">dumbing of age</a></li>
+						<li><a href="http://www.gunnerkrigg.com/">gunnerkrigg court</a></li>
+						<li><a href="http://www.gunshowcomic.com/">gunshow</a></li>
+						<li><a href="http://www.harkavagrant.com">hark! a vagrant</a></li>
+						<li><a href="http://www.mspaintadventures.com/">mspa</a></li>
+						<li><a href="http://www.nedroid.com">nedroid</a></li>
+						<li><a href="http://www.bohemiandrive.com/comics/npwil.html">nine planets</a></li>
+						<li><a href="http://www.octopuspie.com">octopus pie</a></li>
+						<li><a href="http://www.penny-arcade.com">penny arcade</a></li>
+						<li><a href="http://www.questionablecontent.net">questionable content</a></li>
+						<li><a href="http://www.samandfuzzy.com">sam and fuzzy</a></li>
+						<li><a href="http://www.pbfcomics.com/">the perry bible fellowship</a></li>
+						<li><a href="http://www.toothpastefordinner.com">tp4d</a></li>
+						<li><a href="http://www.nonadventures.com">wonderella</a></li>
+						<li><a href="http://www.wondermark.com">wondermark</a></li>
+						<li><a href="http://www.xkcd.com">xkcd</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="sidebar">
+			<div id="sidebarheader">MY NEW BOOK!</div>
+			<a href="http://www.howtoinventeverything.com" target="_new">
+				<img src="htiead3.png">
+				<br>
+			</a>
+			<a href="http://www.howtoinventeverything.com" target="_blank">Check out my new book! It's RAD.</a>
+		</div>
+	</div>
+	<div id="summerfooterbg3">
+		<div id="summerfooter3">&nbsp;</div>
+	</div>
+	<div id="bgclouds">&nbsp;</div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  transform-origin: top left;
+  background: #dae8fe;
+  color: #000;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+a {
+  color: #0000BB;
+}
+a:hover {
+  color: #0000FF;
+}
+a:visited {
+  color: #0000BB;
+}
+
+img.rhamphorhynchus, img.pteranodon {
+  position: absolute;
+  z-index: -1;
+}
+img.pteranodon {
+  position: absolute;
+  right: 86%;
+  top: 40px;
+}
+img.rhamphorhynchus {
+  right: 1%;
+  top: 16px;
+}
+
+table {
+  border: 0;
+}
+
+a[rel=prev], a[rel=next] {
+  display: block;
+  opacity: 0.75;
+  width: 100%;
+  height: 350px;
+  padding-top: 150px;
+  background: #dae8fe;
+  color: #22d;
+  text-decoration: none;
+  font-size: 4rem;
+  font-weight: bolder;
+  transition: background 0.5s ease-out, opacity 0.5s ease-out, color 0.5s ease-out;
+}
+a[rel=prev]:hover, a[rel=next]:hover {
+  opacity: 1;
+  background: #ddf;
+  color: #222;
+}
+a[rel=prev]::after {
+  content: "<";
+}
+a[rel=next]::after {
+  content: ">";
+}
+
+#header, #container {
+  width: 740px;
+  margin: 0 auto;
+}
+
+#header table {
+  width: 740px;
+}
+#header td {
+  padding: 1px;
+  border-spacing: 1px;
+  vertical-align: middle;
+}
+#header tr:first-child td {
+  width: 390px;
+}
+#header tr:first-child td img {
+  width: 390px;
+  height: 56px;
+}
+#header tr:nth-child(2) td {
+  text-align: center;
+}
+#header ul {
+  margin: 3px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#header li {
+  font-size: 0.7rem;
+  margin-right: 1em;
+  white-space: nowrap;
+  list-style-position: inside;
+}
+#header li:first-child {
+  list-style: none;
+}
+
+center table td {
+  padding: 0;
+  border-spacing: 0;
+  z-index: 2;
+}
+
+#container > div {
+  background: #fff;
+  border: 3px solid transparent;
+}
+#container > div > div:first-child {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bolder;
+}
+#container #blogpost, #container #shirtad {
+  float: left;
+  width: 555px;
+  margin-bottom: 10px;
+}
+#container #blogpost {
+  border-color: #00aa00;
+  display: flex;
+  flex-wrap: wrap;
+}
+#container #blogpost > div:first-child, #container #blogpost > p {
+  width: 100%;
+}
+#container #blogpost > div:first-child {
+  background: #42c700;
+}
+#container #blogpost .padded {
+  margin: 0 10px;
+}
+#container #shirtad {
+  border-color: #000;
+}
+#container #shirtad > div:first-child {
+  background: black;
+}
+#container #shirtad .padded {
+  display: flex;
+  margin-top: 5px;
+}
+#container #shirtad .padded div {
+  width: 50%;
+}
+#container #sidebar {
+  border-color: #B57100;
+  width: 160px;
+  margin-left: 565px;
+}
+#container #sidebar > div:first-child {
+  background: #d69221;
+}
+#container .padded {
+  margin: 35px 10px 5px 10px;
+}
+
+p#dubs {
+  position: fixed;
+  right: -2em;
+  top: 0;
+  color: red;
+  font-size: 3em;
+}
+p#dubs a {
+  color: red;
+}
+
+#cf {
+  position: relative;
+  width: 735px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+#cf img {
+  position: absolute;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity: 0;
+  transition-delay: 1s;
+}
+
+/*# sourceMappingURL=style17.css.map */
