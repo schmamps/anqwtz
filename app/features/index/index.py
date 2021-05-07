@@ -6,7 +6,7 @@ import arrow
 from flask import redirect, render_template, request
 
 from ...lib import content, urly
-from . import defs, views
+from . import defs, overlays
 
 
 def get_default_id():
@@ -18,7 +18,7 @@ def get_default_id():
 def get_view_data(
     query: str
 ) -> typing.Tuple[typing.List[defs.View], int]:
-    view_list = views.list_all()
+    view_list = overlays.list_all()
     valid_queries = [v.param for v in view_list]
 
     try:
@@ -26,7 +26,7 @@ def get_view_data(
     except ValueError:
         pass
 
-    return view_list, views.get_default(view_list)
+    return view_list, overlays.get_default(view_list)
 
 
 def get_page_id_spec(query) -> typing.Optional[int]:
@@ -58,7 +58,7 @@ def get_canons(
     return [formatter.format(page_id, mod) for mod in ['-2', '']]
 
 
-def get_page_base(page_id: int, view: views.View) -> dict:
+def get_page_base(page_id: int, view: overlays.View) -> dict:
     canons = get_canons(page_id)
     base = {
         'id': page_id,
@@ -88,7 +88,7 @@ def get_page_nav(
     return {'prev': prev, 'next': next}
 
 
-def serve_page(page_id: int, url: urly.Url, view: views.View):
+def serve_page(page_id: int, url: urly.Url, view: overlays.View):
     return render_template(
         'index.j2',
         page=get_page_base(page_id, view),
